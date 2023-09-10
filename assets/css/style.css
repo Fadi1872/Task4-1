@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+}
+
+
+.flexCenter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.flexColumn{
+    flex-direction: column;
+}
+
+
+
+.back{
+    min-height: 100vh;
+    background-color: #232323;
+    padding: 10%;
+
+}
+.button{
+    background-color: transparent;
+    border: 0;
+    outline: none;
+    color: #ffffff99;
+    font-size: 2rem;
+
+    padding: 10px 20px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    transition: 0.3s;
+
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5),
+                inset 5px 5px 5px rgba(255, 255, 255, 0.2),
+                -3px -3px 10px rgba(255, 255, 255, 0.1),
+                inset -3px -3px 5px rgba(0, 0, 0, 0.4);
+}
+.button:hover, .button:active , .button.progress{
+    color: #1ac00f99;
+    cursor: pointer;
+}
+.button.progress {
+    cursor: default !important;
+}
+.button.disable{
+    color: red;
+    cursor: default !important;
+}
+.buttonText{
+    color: #ffffff33;
+    text-align: center;
+
+    margin-bottom: 30px;
+}
+.block{
+    width: 50px;
+    height: 50px;
+
+    margin: 10px;
+    font-size: 1.8rem;
+    color: #ffffff99;
+
+    border-radius: 50%;
+    box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.5),
+                inset 2px 2px 5px rgba(255, 255, 255, 0.3),
+                -1px -1px 5px rgba(255, 255, 255, 0.2),
+                inset -2px -2px 5px rgba(0, 0, 0, 0.5);
+}
+.greenLight {
+    width: 8px;
+    height: 8px;
+    margin-inline: auto;
+
+    background-color: #999;
+    border-radius: 50%;
+}
+.greenLight.active{
+    background-color: #1ac00f;
+    box-shadow: 0 0 5px 4px #1ac00f99,
+                0 0 10px 8px #1ac00f55;
+}
+.line{
+    width: 200px;
+    height: 2px;
+    border-radius: 1px;
+    transition: 0.3s;
+
+    background-color: #1ac00f;
+    box-shadow: 0 0 5px 1px #1ac00f99,
+                0 0 10px 3px #1ac00f55;
+    margin: 30px 0;
+}
+.line.stop{
+    background-color: #ff0000;
+    box-shadow: 0 0 5px 1px #ff000099,
+                0 0 10px 3px #ff000055;
+}
+.sumBox{
+    width: 200px;
+    height: 60px;
+
+    border-radius: 10px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5),
+                inset 5px 5px 5px rgba(255, 255, 255, 0.2),
+                -3px -3px 10px rgba(255, 255, 255, 0.1),
+                inset -3px -3px 5px rgba(0, 0, 0, 0.4);
+    color: #ffffff99;
+    font-size: 2rem;
+}
