@@ -37,16 +37,18 @@ function printClick() {
     if (document.querySelector('#country').value != '') {
         detailes.country = document.querySelector('#country').value;
     }
+    let year = new Date().getFullYear() - detailes.age;
     
     let i = 0;
-
-    let paragraph = `Hi ${detailes.fname} ${detailes.lname}, Now I have your number which is ${detailes.number}, also I know your age ${detailes.age}, 
-    you live in ${detailes.country}.`;
-
+    let paragraph = ` Hi ${detailes.fname} ${detailes.lname}, Thanks for using my website, 
+                    as you are ${detailes.age} years old, I think you have been born in ${year}, 
+                    since you live in ${detailes.country}, god helps you, 
+                    and this phone number ${detailes.number} is private, don't worry.`;
 
     let counter = setInterval(() => {
         printBox.append(paragraph[i]);
         i++;
+
         if (i === paragraph.length){
             print.classList.remove('progress');
             print.removeAttribute('disabled', '');
@@ -55,3 +57,5 @@ function printClick() {
         }
     }, 100);
 }
+
+            
