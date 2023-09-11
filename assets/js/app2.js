@@ -43,7 +43,8 @@ function printClick() {
     let paragraph = ` Hi ${detailes.fname} ${detailes.lname}, Thanks for using my website, 
                     as you are ${detailes.age} years old, I think you have been born in ${year}, 
                     since you live in ${detailes.country}, god helps you, 
-                    and this phone number ${detailes.number} is private, don't worry.`;
+                    and this phone number ${detailes.number} is private, don't worry. 
+                    When I print the whole object at once ${detailes}`;
 
     let counter = setInterval(() => {
         printBox.append(paragraph[i]);
