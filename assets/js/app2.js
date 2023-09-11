@@ -12,29 +12,41 @@ inputs.forEach(input => {
 });
 
 
-let printBox = document.querySelector('p#boxType');
+let printBox = document.querySelector('#boxType');
 let print = document.querySelector('#print');
+let espan = document.querySelector('#eSpan');
+let detailes = {'fname' : 'fadi', 'lname' : 'noumih', 'number' : '0935741791', 'age' : '21', 'country' : 'Syria'}
 function printClick() {
     printBox.innerHTML = '';
     print.classList.add('progress');
     print.setAttribute('disabled', '');
-    let fname = document.querySelector('#fname').value;
-    let lname = document.querySelector('#lname').value;
-    let num = document.querySelector('#num').value;
-    let age = document.querySelector('#age').value;
-    let email = document.querySelector('#email').value;
+    if (document.querySelector('#fname').value != '') {
+        detailes.fname = document.querySelector('#fname').value;
+    }
+    if (document.querySelector('#lname').value != '') {
+        detailes.lname = document.querySelector('#lname').value;
+    }
+    if (document.querySelector('#num').value != '') {
+        detailes.number = document.querySelector('#num').value;
+    }
+    if (document.querySelector('#age').value != '') {
+        detailes.age = document.querySelector('#age').value;
+    }
+    if (document.querySelector('#country').value != '') {
+        detailes.country = document.querySelector('#country').value;
+    }
+    
     let i = 0;
 
-    let paragraph = `Hi ${fname} ${lname}, Now I have your number which is ${num}, also I know your age ${age} and your email 
-    ${email}`;
+    let paragraph = `Hi ${detailes.fname} ${detailes.lname}, Now I have your number which is ${detailes.number}, also I know your age ${detailes.age}, 
+    you live in ${detailes.country}`;
 
 
     let counter = setInterval(() => {
         printBox.append(paragraph[i]);
         i++;
         if (i === paragraph.length){
-            print.classList.remove('progress');
-            print.removeAttribute('disabled');
+            
             clearInterval(counter);
         }
     }, 100);

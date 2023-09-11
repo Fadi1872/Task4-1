@@ -105,7 +105,7 @@ nav{
     background-color: #999;
     border-radius: 50%;
 }
-.greenLight.active{
+.greenLight.active, .coursor{
     background-color: #1ac00f;
     box-shadow: 0 0 5px 4px #1ac00f99,
                 0 0 10px 8px #1ac00f55;
@@ -139,35 +139,33 @@ nav{
     font-size: 2rem;
 }
 
-.form div , .typing{
+.form div:nth-child(1) , .typing{
     width: 400px;
     min-height: 200px;
-    padding: 30px;
-    margin: 20px;
-    margin-top: 0;
     color: #ffffff55;
     font-size: 1.8rem;
     text-transform: uppercase;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    align-items: flex-start !important;
-    border-radius: 30px;
 
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5),
-                inset 5px 5px 5px rgba(255, 255, 255, 0.2),
-                -3px -3px 10px rgba(255, 255, 255, 0.1),
-                inset -3px -3px 5px rgba(0, 0, 0, 0.4);
+    gap: 10px;
 }
 .form input, form input:active{
     width: 100%;
-    min-width: 250px;
-    padding: 8px 20px;
+    min-width: 200px;
+    padding: 10px 20px;
     font-size: 1.5rem;
 
     background-color: transparent;
     border: 2px transparent solid;
+    border-radius: 15px;
     outline: none;
 
     color: #ffffffaa;
+
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5),
+    inset 5px 5px 5px rgba(255, 255, 255, 0.2),
+    -3px -3px 10px rgba(255, 255, 255, 0.1),
+    inset -3px -3px 5px rgba(0, 0, 0, 0.4);
     
 }
 .form input:focus{
@@ -176,7 +174,11 @@ nav{
 .focused{
     color: #1ac00f99;
 }
-.form button{
-    margin-inline: 20px;
-    align-self: flex-start !important;
+
+
+
+@media screen and (max-width : 520px) {
+    .form div:nth-child(1) , .typing{
+        width: 90%;
+    }
 }
