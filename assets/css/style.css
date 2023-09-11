@@ -18,10 +18,35 @@
 
 
 
+nav{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 50px;
+}
+.Link{
+    color: #ffffff33;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 2rem;
+    margin-inline: 20px;
+
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+    transition: 0.3s;
+}
+.Link:hover{
+    color: #ffffff99;
+}
+.activeLink{
+    color: #1ac00f !important;
+    filter: drop-shadow(0 0 5px #1ac00f99)
+            drop-shadow(0 0 10px #1ac00f55);
+}
 .back{
     min-height: 100vh;
     background-color: #232323;
-    padding: 10%;
+    padding: 70px 10%;
 
 }
 .button{
@@ -45,7 +70,7 @@
     color: #1ac00f99;
     cursor: pointer;
 }
-.button.progress {
+.button.progress, .button:disabled {
     cursor: default !important;
 }
 .button.disable{
@@ -112,4 +137,46 @@
                 inset -3px -3px 5px rgba(0, 0, 0, 0.4);
     color: #ffffff99;
     font-size: 2rem;
+}
+
+.form div , .typing{
+    width: 400px;
+    min-height: 200px;
+    padding: 30px;
+    margin: 20px;
+    margin-top: 0;
+    color: #ffffff55;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    align-items: flex-start !important;
+    border-radius: 30px;
+
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5),
+                inset 5px 5px 5px rgba(255, 255, 255, 0.2),
+                -3px -3px 10px rgba(255, 255, 255, 0.1),
+                inset -3px -3px 5px rgba(0, 0, 0, 0.4);
+}
+.form input, form input:active{
+    width: 100%;
+    min-width: 250px;
+    padding: 8px 20px;
+    font-size: 1.5rem;
+
+    background-color: transparent;
+    border: 2px transparent solid;
+    outline: none;
+
+    color: #ffffffaa;
+    
+}
+.form input:focus{
+    border-bottom: 2px solid #1ac00f99;
+}
+.focused{
+    color: #1ac00f99;
+}
+.form button{
+    margin-inline: 20px;
+    align-self: flex-start !important;
 }

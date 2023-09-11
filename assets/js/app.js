@@ -67,6 +67,8 @@ document.write('<p>' + randArray + '</p>'); */
 function sumClick() {
     let sumO = 0;
     let i = -1;
+    generate.setAttribute('disabled', '');
+    sum5.setAttribute('disabled', '');
     sum.classList.add('progress');
     sum.setAttribute('disabled', '');
     sumBox.innerHTML = '' ;
@@ -87,8 +89,10 @@ function sumClick() {
         }
 
         if (i === 9){
+            generate.removeAttribute('disabled');
             sum.classList.remove('progress');
             sum.removeAttribute('disabled');
+            sum5.removeAttribute('disabled');
             clearInterval(counter);
         };
     }, 500);
@@ -98,6 +102,8 @@ function sumClick() {
 function sum5Click() {
     let sumO5 = 0;
     let i = -1;
+    generate.setAttribute('disabled', '');
+    sum.setAttribute('disabled', '');
     sum5.classList.add('progress');
     sum5.setAttribute('disabled', '');
     sumBox5.innerHTML = '';
@@ -111,6 +117,8 @@ function sum5Click() {
         sumBox5.innerHTML = sumO5 ;
 
         if (i === 4){
+            generate.removeAttribute('disabled');
+            sum.removeAttribute('disabled');
             sum5.classList.remove('progress');
             sum5.removeAttribute('disabled');
             clearInterval(counter);
