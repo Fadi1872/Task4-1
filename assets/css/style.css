@@ -105,7 +105,7 @@ nav{
     background-color: #999;
     border-radius: 50%;
 }
-.greenLight.active, .coursor{
+.greenLight.active, #coursor{
     background-color: #1ac00f;
     box-shadow: 0 0 5px 4px #1ac00f99,
                 0 0 10px 8px #1ac00f55;
@@ -173,6 +173,9 @@ nav{
 }
 .focused{
     color: #1ac00f99;
+}
+#coursor{
+    display: none;
 }
 
 
